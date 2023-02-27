@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lora&family=Noto+Sans+Arabic:wght@200&family=Source+Sans+Pro:wght@200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+    
+    /* font-family: 'Noto Sans Arabic', sans-serif; */
+    /* font-family: 'Source Sans Pro', sans-serif; */
+}
+.App {
+    display: grid;
+    place-items: center;
+    background: url('sunset.jpg') no-repeat center center/cover;
+    height: 100vh;
+
+}
+
+.input {
+    
+    font-size: 2.7rem;
+    border-radius: 10px;
+    border: 1px solid rgba(67, 66, 66, 0.8);
+    background: rgba(163, 25, 25, 0.1);
+    
+    
+
+    
+    
+}
+.input::placeholder {
+    color: rgba(10, 10, 10, 0.308)
+}
+
+.input:focus::placeholder {
+    color: transparent;
+  }
+   
+    
+
+  
+.container {
+    position:relative;
+    width: 80%;
+    height: 70vh;
+    margin-top: 3.5rem;
+    justify-content: center;
+    display: flex;
+     font-family: 'Inconsolata', monospace;  
+/* transition: all 1s ease-out;z */
+
+
+}
+#city {
+    font-size: 3.5rem;
+    font-weight: 800;
+
+}
+
+h1 {
+    text-align: center;
+}
+.cards {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 8px;
+    margin-top: 10px;
+    width: 40%;
+    height: 17vh;
+    border-radius: 10px;
+    margin-top: 21rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+
+}
+.cards p,h2 {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    margin-top: 10px;
+
+}
+.cards:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: linear-gradient(to right , rgb(161, 214, 229) , rgb(129, 147, 237));
+    transition:  0.5s ease;
+
+
+}   
+.cards h2 {
+    text-align: center;
+}
+.cards p {
+    text-align: center;
+    margin-top: 40px;
+    
+}
+.info {
+    position: absolute;
+    margin-top: 14px;
+    font-size: 25px;
+    
+}
+.info p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Current time  */
+span {
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+.time {
+    font-size: 50px;
+    margin-top: -7rem;
+    padding: 0;
+}
