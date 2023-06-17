@@ -28,7 +28,7 @@ export default function Card() {
   let cityNotFound = false; // Initialize the flag
 
   axios
-    .get(`http://api.aladhan.com/v1/timingsByCity?city=${city}&country=SA`)
+    .get(`https://api.aladhan.com/v1/timingsByCity?city=${city}&country=SA`)
     .then(res => {
       const { data } = res;
       if (data.status === "OK") {
