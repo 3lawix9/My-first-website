@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+
+
+import  { useState, useEffect } from 'react';
 import './../App.css';
 import axios from 'axios';
 import { motion } from 'framer-motion';
@@ -12,7 +14,6 @@ function formatTime(timeString) {
   }
 export default function Card() {
   const [city, setCity] = useState('Riyadh');
-  const [country, setCountry] = useState('SA');
   const [show, setShow] = useState(false);
   const [today, setToday] = useState('');
   const [hijriDate, setHijriDate] = useState('');
@@ -27,7 +28,7 @@ export default function Card() {
   let cityNotFound = false; // Initialize the flag
 
   axios
-    .get(`http://api.aladhan.com/v1/timingsByCity?city=${city}&country=${country}`)
+    .get(`http://api.aladhan.com/v1/timingsByCity?city=${city}&country=SA`)
     .then(res => {
       const { data } = res;
       if (data.status === "OK") {
@@ -71,29 +72,7 @@ const searchBy = (event) => {
       placeholder=" أدخل اسم المدينه"
       onKeyDown={searchBy}
     />
-    <select 
-className="select-container"
-  value={country}
-  onChange={event => setCountry(event.target.value)}
->
-<option value="SA">المملكة العربية السعودية</option>
-  <option value="EG">مصر</option>
-  <option value="ID">إندونيسيا</option>
-  <option value="TR">تركيا</option>
-  <option value="IR">إيران</option>
-  <option value="IQ">العراق</option>
-  <option value="PK">باكستان</option>
-  <option value="BD">بنغلاديش</option>
-  <option value="DZ">الجزائر</option>
-  <option value="MA">المغرب</option>
-  <option value="SD">السودان</option>
-  <option value="YE">اليمن</option>
-  <option value="TN">تونس</option>
-  <option value="SY">سوريا</option>
-  <option value="LY">ليبيا</option>
-</select>
 
-    {cityNotFound && <p>There is no city named like this.</p>}
 
       {show ?
         <motion.div
